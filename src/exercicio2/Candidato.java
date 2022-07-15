@@ -4,7 +4,7 @@ public class Candidato {
     private String numeroMatricula;
     private double nota;
 
-    public Candidato() {
+    public Candidato(String numeroMatricula, double nota) {
         this.numeroMatricula = numeroMatricula;
         this.nota = nota;
     }

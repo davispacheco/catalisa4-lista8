@@ -16,11 +16,11 @@ public class Main {
             String opcaoMenu = input.next();
             switch (opcaoMenu) {
                 case "1":
-                    Produto produto = new Produto();
                     System.out.println("Nome do produto:");
-                    produto.setNome(input.next());
+                    String nomeProduto = input.next();
                     System.out.println("Preço:");
-                    produto.setPreco(input.nextDouble());
+                    Double precoProduto = input.nextDouble();
+                    Produto produto = new Produto(nomeProduto, precoProduto);
                     estabelecimento.adicionarProduto(produto);
                     System.out.println("Produto cadastrado com sucesso!");
                     break;
@@ -29,7 +29,7 @@ public class Main {
                     break;
                 case "3":
                     System.out.println("Informe o nome do produto que deseja remover:");
-                    String nomeProduto = input.next();
+                    nomeProduto = input.next();
                     if (estabelecimento.removerProduto(nomeProduto)) {
                         System.out.println("Produto " + nomeProduto + " removido com êxito!");
                     } else {
