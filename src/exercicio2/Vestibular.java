@@ -15,9 +15,14 @@ public class Vestibular {
     }
 
     public void listarCandidatos() {
-        for (Candidato candidato : candidatos) {
-            System.out.println("Número da matrícula: " + candidato.getNumeroMatricula());
-            System.out.println("Nota: " + candidato.getNota());
+        if (candidatos.isEmpty()) {
+            System.out.println("Nenhum candidato cadastrado.");
+        } else {
+            System.out.println("Candidatos cadastrados: " + candidatos.size());
+            for (Candidato candidato : candidatos) {
+                System.out.println("Número da matrícula: " + candidato.getNumeroMatricula());
+                System.out.println("Nota: " + candidato.getNota());
+            }
         }
     }
     public boolean removerCandidato(String matricula) {

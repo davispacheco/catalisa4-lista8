@@ -50,12 +50,7 @@ public class Main {
                     }
                     break;
                 case "2":
-                    if (estabelecimento.getProdutos().size() == 0) {
-                        System.out.println("Nenhum produto cadastrado.");
-                    } else {
-                        System.out.println("Produtos cadastrados: " + estabelecimento.getProdutos().size());
-                        estabelecimento.listarProdutos();
-                    }
+                    estabelecimento.listarProdutos();
                     break;
                 case "3":
                     System.out.println("Informe o nome do produto que deseja remover:");

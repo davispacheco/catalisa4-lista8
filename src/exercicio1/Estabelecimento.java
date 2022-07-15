@@ -15,9 +15,14 @@ public class Estabelecimento {
     }
 
     public void listarProdutos() {
-        for (Produto produto : produtos) {
-            System.out.println("Nome do produto: " + produto.getNome());
-            System.out.println("Preço do produto: " + produto.getPreco());
+        if (produtos.isEmpty()) {
+            System.out.println("Nenhum produto cadastrado.");
+        } else {
+            System.out.println("Produtos cadastrados: " + produtos.size());
+            for (Produto produto : produtos) {
+                System.out.println("Nome do produto: " + produto.getNome());
+                System.out.println("Preço do produto: " + produto.getPreco());
+            }
         }
     }
 
