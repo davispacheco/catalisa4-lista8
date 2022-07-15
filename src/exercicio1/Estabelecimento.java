@@ -14,11 +14,18 @@ public class Estabelecimento {
         this.produtos.add(p1);
     }
 
-    public void removerProduto(String nomeProduto) {
+    public void listarProdutos() {
         for (Produto produto : produtos) {
-            if (produto.getNome().equalsIgnoreCase(nomeProduto)) {
-                produtos.remove(produto);
-            }
+            System.out.println("Nome do produto: " + produto.getNome());
+            System.out.println("Preço do produto: " + produto.getPreco());
+        }
+    }
+
+    public boolean removerProduto(String nomeProduto) {
+        if (produtos.removeIf(produto -> produto.getNome().equalsIgnoreCase(nomeProduto))) {
+            return true;
+        } else {
+            return false;
         }
     }
 
