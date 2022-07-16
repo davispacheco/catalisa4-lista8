@@ -13,11 +13,11 @@ public class Main {
             System.out.println("2: Listar os produtos cadastrados");
             System.out.println("3: Remover um produto pelo nome");
             System.out.println("4: Finalizar");
-            String opcaoMenu = input.next();
+            String opcaoMenu = input.nextLine();
             switch (opcaoMenu) {
                 case "1":
                     System.out.println("Nome do produto:");
-                    String nomeProduto = input.next();
+                    String nomeProduto = input.nextLine();
                     System.out.println("Preço:");
                     Double precoProduto = input.nextDouble();
                     Produto produto = new Produto(nomeProduto, precoProduto);
@@ -29,7 +29,7 @@ public class Main {
                     break;
                 case "3":
                     System.out.println("Informe o nome do produto que deseja remover:");
-                    nomeProduto = input.next();
+                    nomeProduto = input.nextLine();
                     if (estabelecimento.removerProduto(nomeProduto)) {
                         System.out.println("Produto " + nomeProduto + " removido com êxito!");
                     } else {

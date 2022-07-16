@@ -13,11 +13,11 @@ public class Main {
             System.out.println("2: Listar candidatos cadastrados");
             System.out.println("3: Remover um candidato da lista");
             System.out.println("4: Finalizar");
-            String opcaoMenu = input.next();
+            String opcaoMenu = input.nextLine();
             switch (opcaoMenu) {
                 case "1":
                     System.out.println("Número da matrícula:");
-                    String matricula = input.next();
+                    String matricula = input.nextLine();
                     System.out.println("Nota:");
                     double nota = input.nextDouble();
                     Candidato candidato = new Candidato(matricula, nota);
@@ -29,7 +29,7 @@ public class Main {
                     break;
                 case "3":
                     System.out.println("Informe o número da matrícula do candidato que deseja remover:");
-                    matricula = input.next();
+                    matricula = input.nextLine();
                     if (vestibular.removerCandidato(matricula)) {
                         System.out.println("Candidato com a matrícula " + matricula + " removido com êxito!");
                     } else {
