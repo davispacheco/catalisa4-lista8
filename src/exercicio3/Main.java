@@ -13,13 +13,13 @@ public class Main {
             System.out.println("2: Listar pratos cadastrados");
             System.out.println("3: Remover um prato do cardápio");
             System.out.println("4: Finalizar");
-            String opcaoMenu = input.next();
+            String opcaoMenu = input.nextLine();
             switch (opcaoMenu) {
                 case "1":
                     System.out.println("Nome do prato:");
-                    String nomePrato = input.next();
+                    String nomePrato = input.nextLine();
                     System.out.println("Ingredientes:");
-                    String ingredientesPrato = input.next();
+                    String ingredientesPrato = input.nextLine();
                     Prato prato = new Prato(nomePrato, ingredientesPrato);
                     cardapio.adicionarPrato(prato);
                     System.out.println("Prato cadastrado com sucesso!");
@@ -29,7 +29,7 @@ public class Main {
                     break;
                 case "3":
                     System.out.println("Informe o nome do prato que deseja remover do cardápio:");
-                    nomePrato = input.next();
+                    nomePrato = input.nextLine();
                     if (cardapio.removerPrato(nomePrato)) {
                         System.out.println("Prato com o nome " + nomePrato + " removido com êxito!");
                     } else {
