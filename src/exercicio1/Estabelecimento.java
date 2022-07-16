@@ -27,11 +27,7 @@ public class Estabelecimento {
     }
 
     public boolean removerProduto(String nomeProduto) {
-        if (produtos.removeIf(produto -> produto.getNome().equalsIgnoreCase(nomeProduto))) {
-            return true;
-        } else {
-            return false;
-        }
+        return produtos.removeIf(produto -> produto.getNome().equalsIgnoreCase(nomeProduto));
     }
 
     public Set<Produto> getProdutos() {

@@ -26,11 +26,7 @@ public class Vestibular {
         }
     }
     public boolean removerCandidato(String matricula) {
-        if (candidatos.removeIf(candidato -> candidato.getNumeroMatricula().equalsIgnoreCase(matricula))) {
-            return true;
-        } else {
-            return false;
-        }
+        return candidatos.removeIf(candidato -> candidato.getNumeroMatricula().equalsIgnoreCase(matricula));
     }
     public Set<Candidato> getCandidatos() {
         return candidatos;
